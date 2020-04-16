@@ -1,0 +1,12 @@
+databaseChangeLog:
+- changeSet:
+    id: personcontact
+    author: Sourabh Vemra
+    changes:
+    - sqlFile:
+        path: Create-REF_MESSAGE_DATA.sql
+        relativeToChangelogFile: true
+    - loadData:
+        file: db/changelog/REF_MESSAGE_DATA.csv
+        tableName: REF_MESSAGE_DATA
+        quotchar: '"'
